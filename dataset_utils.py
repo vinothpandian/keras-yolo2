@@ -17,6 +17,12 @@ train_anno_path = "./train_anno/"
 val_img_path = "./val_img/"
 val_anno_path = "./val_anno/"
 
+os.makedirs(train_img_path, exist_ok=True)
+os.makedirs(train_anno_path, exist_ok=True)
+os.makedirs(val_img_path, exist_ok=True)
+os.makedirs(val_anno_path, exist_ok=True)
+
+
 for i in train:
     shutil.copy(os.path.join(
         img_path, "raccoon-{}.jpg".format(i)), train_img_path)
