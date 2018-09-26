@@ -113,3 +113,5 @@ dmypy.json
 *.h5
 train_*
 val_*
+*dataset
+notebooks

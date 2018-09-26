@@ -1,36 +1,36 @@
 {
-    "model" : {
-        "backend":              "Full Yolo",
-        "input_size":           416,
-        "anchors":              [0.57273, 0.677385, 1.87446, 2.06253, 3.33843, 5.47434, 7.88282, 3.52778, 9.77052, 9.16828],
-        "max_box_per_image":    10,        
-        "labels":               ["kangaroo"]
-    },
+  "model": {
+    "backend": "Tiny Yolo",
+    "input_size": 416,
+    "anchors": [3.95, 4.83, 5.28, 8.08, 6.76, 11.29, 9.59, 8.74, 10.75, 11.92],
+    "max_box_per_image": 10,
+    "labels": ["raccoon"]
+  },
 
-    "train": {
-        "train_image_folder":   "/home/andy/data/kangaroo/images/",
-        "train_annot_folder":   "/home/andy/data/kangaroo/annots/",     
-          
-        "train_times":          8,
-        "pretrained_weights":   "full_yolo_kangaroo3.h5",
-        "batch_size":           16,
-        "learning_rate":        1e-4,
-        "nb_epochs":            1,
-        "warmup_epochs":        3,
+  "train": {
+    "train_image_folder": "/home/vinoth/TestProjects/keras-yolo2/train_img/",
+    "train_annot_folder": "/home/vinoth/TestProjects/keras-yolo2/train_anno/",
 
-        "object_scale":         5.0 ,
-        "no_object_scale":      1.0,
-        "coord_scale":          1.0,
-        "class_scale":          1.0,
+    "train_times": 1,
+    "pretrained_weights": "",
+    "batch_size": 4,
+    "learning_rate": 1e-4,
+    "nb_epochs": 1,
+    "warmup_epochs": 1,
 
-        "saved_weights_name":   "full_yolo_kangaroo.h5",
-        "debug":                true
-    },
+    "object_scale": 5.0,
+    "no_object_scale": 1.0,
+    "coord_scale": 1.0,
+    "class_scale": 1.0,
 
-    "valid": {
-        "valid_image_folder":   "",
-        "valid_annot_folder":   "",
+    "saved_weights_name": "tiny_yolo_raccoon.h5",
+    "debug": true
+  },
 
-        "valid_times":          1
-    }
+  "valid": {
+    "valid_image_folder": "/home/vinoth/TestProjects/keras-yolo2/val_img/",
+    "valid_annot_folder": "/home/vinoth/TestProjects/keras-yolo2/val_anno/",
+
+    "valid_times": 1
+  }
 }
